@@ -21,23 +21,29 @@ const modelos = {
 		nombre: 'Coupe',
 		precio: '$25,000',
 		info: 'El Coupe es un automóvil con estilo deportivo, con dos puertas y asientos para dos personas.'
-    },
+    },suv: {
+		nombre: 'SUV',
+		precio: '$30,000',
+		info: 'El SUV es un vehículo utilitario deportivo con espacio para 7 personas.'
+	}
         }
+
 // Ocultar todas las páginas, excepto la primera
 document.getElementById('page-1').classList.add('show');
 
 // Mostrar información sobre el modelo de auto seleccionado
 modelo.addEventListener('change', () => {
 	const seleccion = modelo.value;
-	if (seleccion) {
-		const modeloInfo = modelos[seleccion];
+	if (seleccion === '') {
+		infoModelo.innerHTML = '<p>Por favor seleccione un modelo para obtener más información.</p>';
+	} else {
 		infoModelo.innerHTML = `
-			<h3>${modeloInfo.nombre}</h3>
-			<p><strong>Precio:</strong> ${modeloInfo.precio}</p>
-			<p>${modeloInfo.info}</p>
+			<h3>${modelos[seleccion].nombre}</h3>
+			<p><strong>Precio:</strong> ${modelos[seleccion].precio}</p>
+			<p>${modelos[seleccion].info}</p>
 		`;
 	}
-});
+	});
 
 // Navegación del formulario
 nextPage1.addEventListener('click', () => {
@@ -72,6 +78,7 @@ prevPage3.addEventListener('click', () => {
 	document.getElementById('page-2').classList.add('show');
 });
 
+// Mostrar alerta de confirmación al enviar el formulario
 formulario.addEventListener('submit', (event) => {
 	event.preventDefault();
 	alert('¡Gracias por su compra!');
