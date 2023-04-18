@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario de Compra</title>
+	<link rel="stylesheet" type="text/css" href="form.css">
+</head>
+<body>
+	<form id="formulario" action="#" method="post">
+        <div id="page-1" class="page">
+            <h2>Selecciona un modelo de automóvil</h2>
+            <label for="modelo">Modelo:</label>
+            <select name="modelo" id="modelo">
+                <option value="">Selecciona un modelo</option>
+                <option value="sedan">Sedan</option>
+                <option value="coupe">Coupe</option>
+                <option value="suv">SUV</option>
+            </select>
+            <div id="info-modelo"></div>
+            <button id="next-page-1" type="button">Siguiente</button>
+        </div>
+        <div id="page-2" class="page">
+            <h2>Completa tus datos personales</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+            <button id="prev-page-2" type="button">Anterior</button>
+            <button id="next-page-2" type="button">Siguiente</button>
+        </div>
+        <div id="page-3" class="page">
+            <h2>Confirmar compra</h2>
+            <p>Modelo de automóvil: <span id="confirm-modelo"></span></p>
+            <p>Nombre: <span id="confirm-nombre"></span></p>
+            <p>Correo electrónico: <span id="confirm-correo"></span></p>
+            <p>Teléfono: <span id="confirm-telefono"></span></p>
+            <button id="prev-page-3" type="button">Anterior</button>
+            <button type="submit">Comprar</button>
+        </div>
+    </form>
+    
+    
+</body>
+<script src="form.js"></script>
+</html>

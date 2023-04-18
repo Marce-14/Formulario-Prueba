@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Compra de autos - Selección de modelo</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<!-- Pagina 1: Selección de vehículo -->
+<section id="seleccion-vehiculo">
+	<h2>Selección de vehículo</h2>
+	<form id="formulario-vehiculo">
+	  <label for="modelo">Modelo de auto:</label>
+	  <select id="modelo" name="modelo" required>
+		<option value="">Seleccione un modelo</option>
+		<option value="sedan">Sedán</option>
+		<option value="coupe">Coupé</option>
+		<option value="hatchback">Hatchback</option>
+		<option value="suv">SUV</option>
+	  </select>
+	  <div id="informacion-vehiculo"></div>
+	  <button type="submit" id="btn-siguiente">Siguiente</button>
+	</form>
+  </section>
+  
+  <!-- Pagina 2: Ingrese sus datos personales para completar la compra -->
+  <section id="datos-personales">
+	<h2>Ingrese sus datos personales para completar la compra</h2>
+	<form id="formulario-datos">
+	  <label for="nombre">Nombre completo:</label>
+	  <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required>
+  
+	  <label for="email">Correo electrónico:</label>
+	  <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
+  
+	  <label for="telefono">Teléfono:</label>
+	  <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" required>
+  
+	  <label for="direccion">Dirección:</label>
+	  <input type="text" id="direccion" name="direccion" placeholder="Ingrese su dirección" required>
+  
+	  <label for="ciudad">Ciudad:</label>
+	  <input type="text" id="ciudad" name="ciudad" placeholder="Ingrese su ciudad" required>
+  
+	  <button type="submit" id="btn-comprar">Comprar</button>
+	</form>
+  </section>
+  
+	<script src="script.js"></script>
+</body>
+</html>
