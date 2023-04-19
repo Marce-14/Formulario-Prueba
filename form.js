@@ -64,7 +64,9 @@ nextPage2.addEventListener('click', () => {
 	const correo = document.getElementById('correo').value;
 	const telefono = document.getElementById('telefono').value;
 	if (nombre && correo && telefono) {
+		const seleccion = modelo.value;
 		document.getElementById('confirm-modelo').textContent = modelos[modelo.value].nombre;
+		document.getElementById('info-modelo-confirm').textContent = modelos[seleccion].info; // Agregar información del modelo al resumen de la compra
 		document.getElementById('confirm-nombre').textContent = nombre;
 		document.getElementById('confirm-correo').textContent = correo;
 		document.getElementById('confirm-telefono').textContent = telefono;
